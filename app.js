@@ -36,6 +36,6 @@ process.on('uncaughtException', function (err) {
     console.log(err);
 })
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log('battle app running on port 3000');
 });
