@@ -24,12 +24,6 @@ module.exports = class Battle {
 
     getStats() {
         return new promise((resolve, reject) => {
-            // console.log(battle_db)
-            // battle_db.db.stats({}, (err, locations) => {
-            //     if (err)
-            //         reject(err);
-            //     resolve(locations);
-            // })
             Promise.all([
                 battle.aggregate([
                     {

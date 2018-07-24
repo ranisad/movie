@@ -9,6 +9,7 @@
     "mongoose": "^5.2.4",
     "promise": "^8.0.1"
   },
+  "engines" : { "node" : "10.7.0" },
   "devDependencies": {},
   "scripts": {
     "start": "node app.js",
