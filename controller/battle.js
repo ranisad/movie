@@ -2,6 +2,10 @@ const router = require('express').Router();
 const battleDal = require('./../DAL/battle');
 let battle = new battleDal();
 
+router.get('/', (request, response) => {
+    response.json({ "hello": "world" })
+})
+
 router.get('/list', (request, response) => {
     battle.getAllBattlePlaces().then(data => {
         response.json(data);
