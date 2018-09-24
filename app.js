@@ -10,7 +10,7 @@ app.use(cookieParser());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/',require('./controller/battle'));
+app.use('/',require('./controller/movie'));
 
 // Handle 404
 app.use(function (req, res) {

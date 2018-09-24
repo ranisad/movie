@@ -1,14 +1,10 @@
-var mongoose = require('mongoose');
-
+const MongoClient = require('mongodb').MongoClient;
+var db = null;
 //Set up default mongoose connection
-var mongoDB = 'mongodb://sadhana590:sa1234@ds247061.mlab.com:47061/battle_db';
-mongoose.connect(mongoDB, { useNewUrlParser: true });
-// Get Mongoose to use the global promise library
-mongoose.Promise = global.Promise;
-//Get the default connection
-var db = mongoose.connection;
-global.battle_db = db;
-//Bind connection to error event (to get notification of connection errors)
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+var mongoDB = 'mongodb://sadhana590:sa1234@ds161312.mlab.com:61312/movie_db';
+MongoClient.connect(mongoDB, { useNewUrlParser: true },function(err, client) {
+    db = client.db();
+    global.movie_db = db;
+});
 
 module.exports  = db;

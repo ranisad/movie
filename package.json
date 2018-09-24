@@ -6,10 +6,13 @@
   "dependencies": {
     "cookie-parser": "^1.4.3",
     "express": "^4.16.3",
+    "mongodb": "^3.1.6",
     "mongoose": "^5.2.4",
     "promise": "^8.0.1"
   },
-  "engines" : { "node" : "10.7.0" },
+  "engines": {
+    "node": "10.7.0"
+  },
   "devDependencies": {},
   "scripts": {
     "start": "node app.js",
